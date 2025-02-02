@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href='style.css' />
-  <script src="src/index.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="src/index.js"></script> <!-- Added defer to ensure JS runs after the page loads -->
   <title>KidsMDb</title>
 </head>
 <body>
@@ -26,15 +26,16 @@
   </ul>
 
   <section>
-    <form>
+    <form id="searchForm">
       <label for="searchByID">Search By ID</label>
       <input id="searchByID" type="text" placeholder="Enter ID here"/>
       <input type="submit" />
     </form>
   </section>
+
   <section id="movieDetails">
-    <h4>Title</h4>
-    <p>Summary</p>
+    <h4 id="movieTitle">Title</h4>
+    <p id="movieSummary">Summary</p>
   </section>
 </body>
 </html>
